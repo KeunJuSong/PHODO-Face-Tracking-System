@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2016 The TensorFlow Authors. All Rights Reserved.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:orientation="vertical">
+
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            tools:context="com.example.phodo_2.facerecognizer.CameraActivity" >
+
+            <ImageButton
+                android:id="@+id/add_button"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center|bottom|right"
+                android:layout_marginBottom="158dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/add_face"
+                />
+
+            <ImageButton
+                android:id="@+id/list_currface"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center|bottom|left"
+                android:layout_marginBottom="158dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/add_face"/>
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/add_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center|bottom|right"-->
+<!--                android:layout_marginBottom="152dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:tint="@android:color/white"-->
+<!--                android:src="@android:drawable/ic_input_add"-->
+<!--                android:visibility="invisible"/>-->
+        </FrameLayout>
+
+        <!--    <Button-->
+<!--        android:id="@+id/switchface"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="center|bottom"-->
+<!--        android:layout_marginRight="150dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:background="@mipmap/ic_launcher_round"/>-->
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/modeSelect"-->
+<!--        android:layout_width="45dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="center|top"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:text="N"-->
+<!--        android:textSize="30sp"-->
+<!--        android:background="@drawable/list_item_background" />-->
+    </RelativeLayout>
+
+    <!--  voice recognition text  -->
+    <TextView
+        android:id="@+id/returnedtext_tf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <!-- timer capture text -->
+    <TextView
+        android:id="@+id/timerInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="68dp"
+        android:textColor="#59FFFFFF"/>
+
+    <View
+        android:id="@+id/center_optimal"
+        android:layout_marginTop="58dp"
+        android:layout_width="114dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="148dp"
+        android:background="#1A8A2BE2"
+        android:visibility="invisible"
+        >
+    </View>
+
+    <View
+        android:id="@+id/left_optimal"
+        android:layout_marginTop="58dp"
+        android:layout_width="114dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="148dp"
+        android:layout_marginLeft="58dp"
+        android:background="#1A8A2BE2"
+        android:visibility="invisible"
+        >
+    </View>
+
+    <View
+        android:id="@+id/right_optimal"
+        android:layout_marginTop="58dp"
+        android:layout_width="114dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginBottom="148dp"
+        android:layout_marginRight="58dp"
+        android:background="#1A8A2BE2"
+        android:visibility="invisible"
+        >
+    </View>
+
+    <!-- Main Top layout of the App -->
+    <FrameLayout
+        android:id="@+id/mainTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/switchface"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="36dp"
+            android:background="@drawable/camera_switch"
+            android:contentDescription="@string/toggle_camera"
+            />
+
+        <!-- 4 Timer Capture State Btn  -->
+        <ImageButton
+            android:id="@+id/timerBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="104dp"
+            android:background="@drawable/timer_none"/>
+
+        <ImageButton
+            android:id="@+id/timer2StateBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="104dp"
+            android:background="@drawable/timer_2_final"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/timer5StateBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="104dp"
+            android:background="@drawable/timer_5"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/timer10StateBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="104dp"
+            android:background="@drawable/timer_10"
+            android:visibility="invisible"/>
+
+        <!-- 4 Optimal Position State Btn  -->
+        <ImageButton
+            android:id="@+id/modeSelect_tf"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/normal_optimal_btn"
+            />
+
+        <ImageButton
+            android:id="@+id/center_modeSelect_tf"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/center_optimal_btn"
+            android:visibility="invisible"
+            />
+
+        <ImageButton
+            android:id="@+id/left_modeSelect_tf"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/left_optimal_btn"
+            android:visibility="invisible"
+            />
+
+        <ImageButton
+            android:id="@+id/right_modeSelect_tf"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/right_optimal_btn"
+            android:visibility="invisible"
+            />
+
+
+        <!-- 3 Flash State Btn(ON / OFF / AUTO) -->
+        <ImageButton
+            android:id="@+id/flashBtn"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="104dp"
+            android:background="@drawable/flash_on"/>
+
+        <ImageButton
+            android:id="@+id/flashAutoState"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="104dp"
+            android:background="@drawable/flash_auto"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/flashOffState"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="104dp"
+            android:background="@drawable/flash_off"
+            android:visibility="invisible"/>
+
+        <!-- Setting Btn (have 'AutoZoom', 'Bluetooth', 'Voice Recognition')        -->
+        <ImageButton
+            android:id="@+id/saveBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="36dp"
+            android:background="@drawable/settings" />
+    </FrameLayout>
+
+    <!-- This is Timer layout -->
+    <FrameLayout
+        android:id="@+id/timerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+        <ImageButton
+            android:id="@+id/timer5Btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="136dp"
+            android:background="@drawable/timer_5"/>
+
+        <ImageButton
+            android:id="@+id/timer10Btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="72dp"
+            android:background="@drawable/timer_10"/>
+
+        <ImageView
+            android:id="@+id/timer2Btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="136dp"
+            android:background="@drawable/timer_2_final"/>
+
+        <ImageButton
+            android:id="@+id/timerDisableBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="72dp"
+            android:background="@drawable/timer_none"/>
+    </FrameLayout>
+
+    <!-- 임시 버튼 저장 layout -->
+    <FrameLayout
+        android:id="@+id/saveLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+
+        <ToggleButton
+            android:id="@+id/handsFree_tf"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="98dp"
+            android:background="@drawable/mic_off"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/autozoom"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="98dp"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/autozoom_toggle"/>
+
+        <ImageButton
+            android:id="@+id/blue_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bluetooth"/>
+    </FrameLayout>
+
+    <!--    Zoom Seekbar    -->
+    <SeekBar
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/SeekBarColor"
+        android:id="@+id/zoom"
+        android:max="20"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="192dp" />
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/auto_zoom_off"
+        android:backgroundTint="@color/white"
+        />
+
+    <!-- My Custom Controls -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/capturePicture"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/camera_photobtn"
+            />
+
+        <ImageButton
+            android:id="@+id/captureVideoSnapshot"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/camera_videobtn"/>
+
+        <ImageButton
+            android:id="@+id/album"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/camera_album"/>
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/phodo_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="12dp"/>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

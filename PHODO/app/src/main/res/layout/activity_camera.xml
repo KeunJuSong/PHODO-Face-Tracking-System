@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainframe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FF444444"
+    tools:context=".MainActivity">
+
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:keepScreenOn="true"
+        app:cameraExperimental="true"
+        app:cameraEngine="camera1"
+        app:cameraPlaySounds="true"
+        app:cameraGrid="off"
+        app:cameraFlash="auto"
+        app:cameraAudio="on"
+        app:cameraFacing="back"
+        app:cameraGestureTap="autoFocus"
+        app:cameraGesturePinch="zoom"
+        app:cameraGestureScrollVertical="exposureCorrection"
+        app:cameraMode="picture"
+        app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker"
+        >
+
+        <!--  voice recognition text  -->
+        <TextView
+            android:id="@+id/returnedtext_tf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <!-- timer capture text -->
+        <TextView
+            android:id="@+id/timerInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="68dp"
+            android:textColor="#59FFFFFF"/>
+
+    </com.otaliastudios.cameraview.CameraView>
+
+    <husaynhakeem.io.facedetector.FaceBoundsOverlay
+        android:id="@+id/faceBoundsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Main Top layout of the App -->
+    <FrameLayout
+        android:id="@+id/mainTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/toggleCameraButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="36dp"
+            android:background="@drawable/camera_switch"
+            android:contentDescription="@string/toggle_camera"
+            />
+
+        <!-- 4 Timer Capture State Btn  -->
+        <ImageButton
+            android:id="@+id/timerBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="104dp"
+            android:background="@drawable/timer_none"/>
+
+        <ImageButton
+            android:id="@+id/timer2StateBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="104dp"
+            android:background="@drawable/timer_2_final"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/timer5StateBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="104dp"
+            android:background="@drawable/timer_5"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/timer10StateBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="104dp"
+            android:background="@drawable/timer_10"
+            android:visibility="invisible"/>
+
+        <!-- 4 Optimal Position State Btn  -->
+        <ImageButton
+            android:id="@+id/modeSelect_tf"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/normal_optimal_btn"
+            />
+
+        <ImageButton
+            android:id="@+id/center_modeSelect_tf"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/center_optimal_btn"
+            android:visibility="invisible"
+            />
+
+        <ImageButton
+            android:id="@+id/left_modeSelect_tf"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/left_optimal_btn"
+            android:visibility="invisible"
+            />
+
+        <ImageButton
+            android:id="@+id/right_modeSelect_tf"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/right_optimal_btn"
+            android:visibility="invisible"
+            />
+
+
+        <!-- 3 Flash State Btn(ON / OFF / AUTO) -->
+        <ImageButton
+            android:id="@+id/flashBtn"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="104dp"
+            android:background="@drawable/flash_on"/>
+
+        <ImageButton
+            android:id="@+id/flashAutoState"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="104dp"
+            android:background="@drawable/flash_auto"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/flashOffState"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="104dp"
+            android:background="@drawable/flash_off"
+            android:visibility="invisible"/>
+
+        <!-- Setting Btn (have 'AutoZoom', 'Bluetooth', 'Voice Recognition')        -->
+        <ImageButton
+            android:id="@+id/saveBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="36dp"
+            android:background="@drawable/settings" />
+
+
+        <!--        <ToggleButton-->
+        <!--            android:id="@+id/handsFree_tf"-->
+        <!--            android:layout_width="25dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:layout_gravity="center|right"-->
+        <!--            android:layout_marginRight="70dp"-->
+        <!--            android:background="@drawable/mic_off"-->
+        <!--            android:textOff=""-->
+        <!--            android:textOn="" />-->
+
+        <!--        <ToggleButton-->
+        <!--            android:id="@+id/autozoom"-->
+        <!--            android:layout_width="23dp"-->
+        <!--            android:layout_height="23dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="60dp"-->
+        <!--            android:textOff=""-->
+        <!--            android:textOn=""-->
+        <!--            android:background="@drawable/autozoom_toggle"/>-->
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/blue_btn"-->
+        <!--            android:layout_width="25dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginRight="130dp"-->
+        <!--            android:background="@drawable/bluetooth"/>-->
+
+        <!--  This is CameraView lib's setting! -->
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/edit"-->
+        <!--            android:layout_width="22dp"-->
+        <!--            android:layout_height="22dp"-->
+        <!--            android:layout_gravity="center|right"-->
+        <!--            android:layout_marginRight="36dp"-->
+        <!--            android:background="@drawable/settings"/>-->
+
+    </FrameLayout>
+
+    <!-- This is Flash Layout -->
+    <FrameLayout
+        android:id="@+id/flashLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+        <ImageButton
+            android:id="@+id/flashOffBtn"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@drawable/flash_off"/>
+
+        <ImageButton
+            android:id="@+id/flashAutoBtn"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="98dp"
+            android:background="@drawable/flash_auto"/>
+
+        <ImageButton
+            android:id="@+id/flashOnBtn"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="98dp"
+            android:background="@drawable/flash_on"/>
+    </FrameLayout>
+
+    <!-- This is Timer layout -->
+    <FrameLayout
+        android:id="@+id/timerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+
+        <ImageButton
+            android:id="@+id/timer5Btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="136dp"
+            android:background="@drawable/timer_5"/>
+
+        <ImageButton
+            android:id="@+id/timer10Btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="72dp"
+            android:background="@drawable/timer_10"/>
+
+        <ImageView
+            android:id="@+id/timer2Btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="136dp"
+            android:background="@drawable/timer_2_final"/>
+
+        <ImageButton
+            android:id="@+id/timerDisableBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="72dp"
+            android:background="@drawable/timer_none"/>
+
+    </FrameLayout>
+
+    <!-- 임시 버튼 저장 layout -->
+    <FrameLayout
+        android:id="@+id/saveLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+
+        <ToggleButton
+            android:id="@+id/handsFree_tf"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="98dp"
+            android:background="@drawable/mic_off"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/autozoom"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="98dp"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/autozoom_toggle"/>
+
+        <ImageButton
+            android:id="@+id/blue_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bluetooth"/>
+    </FrameLayout>
+
+
+    <!--    Zoom Seekbar    -->
+    <SeekBar
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/SeekBarColor"
+        android:id="@+id/zoom"
+        android:max="20"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="192dp" />
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/auto_zoom_off"
+        android:backgroundTint="@color/white"
+        />
+
+    <!--    Exposure Seekbar    -->
+    <SeekBar
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/SeekBarColor"
+        android:id="@+id/exposure"
+        android:max="20"
+        android:layout_gravity="center|bottom|right"
+        android:rotation="270"
+        android:layout_marginRight="-58dp"
+        android:layout_marginBottom="368dp"
+        />
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center|right|bottom"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="368dp"
+        android:background="@drawable/exposure"
+        android:backgroundTint="@color/white"/>
+
+    <View
+        android:id="@+id/left_optimal"
+        android:layout_marginTop="58dp"
+        android:layout_width="114dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="148dp"
+        android:layout_marginLeft="58dp"
+        android:background="#1A8A2BE2"
+        android:visibility="invisible"
+        >
+    </View>
+
+    <View
+        android:id="@+id/right_optimal"
+        android:layout_marginTop="58dp"
+        android:layout_width="114dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginBottom="148dp"
+        android:layout_marginRight="58dp"
+        android:background="#1A8A2BE2"
+        android:visibility="invisible"
+        >
+    </View>
+
+    <View
+        android:id="@+id/center_optimal"
+        android:layout_marginTop="58dp"
+        android:layout_width="114dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="148dp"
+        android:background="#1A8A2BE2"
+        android:visibility="invisible"
+        >
+    </View>
+
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginBottom="164dp"-->
+    <!--        android:text="Zoom :"-->
+    <!--        android:textSize="20sp"/>-->
+
+    <!-- Non-Customized toggle btn -->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_marginBottom="96dp"-->
+    <!--        android:layout_gravity="bottom|start">-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/toggleCameraButton"-->
+    <!--        android:layout_width="56dp"-->
+    <!--        android:layout_height="56dp"-->
+    <!--        android:layout_margin="16dp"-->
+    <!--        android:background="@drawable/background"-->
+    <!--        android:contentDescription="@string/toggle_camera"-->
+    <!--        android:src="@drawable/ic_switch" />-->
+    <!--    </LinearLayout>-->
+
+    <!-- My Custom Controls -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/capturePicture"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/camera_photobtn"
+            />
+
+        <ImageButton
+            android:id="@+id/captureVideoSnapshot"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/camera_videobtn"/>
+
+        <ImageButton
+            android:id="@+id/album"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/camera_album"/>
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/phodo_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="12dp"/>
+    </FrameLayout>
+
+    <!-- Controls -->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom"-->
+    <!--        android:padding="16dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:background="@color/colorPrimary"-->
+    <!--        android:weightSum="4">-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/edit"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="56dp"-->
+    <!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--            app:srcCompat="@drawable/ic_edit" />-->
+
+    <!--        <Space-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_weight="1" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/capturePicture"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="56dp"-->
+    <!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--            app:srcCompat="@drawable/ic_photo" />-->
+
+    <!--        <Space-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_weight="1" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/capturePictureSnapshot"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="56dp"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--            android:gravity="center" >-->
+    <!--            <ImageView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:srcCompat="@drawable/ic_photo"/>-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:textColor="@android:color/white"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:textSize="10sp"-->
+    <!--                android:text="SNAP"/>-->
+    <!--        </LinearLayout>-->
+
+    <!--        <Space-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_weight="1" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/captureVideo"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="56dp"-->
+    <!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--            app:srcCompat="@drawable/ic_video" />-->
+
+    <!--        <Space-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_weight="1" />-->
+
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/captureVideoSnapshot"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="56dp"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--            android:gravity="center" >-->
+    <!--            <ImageView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:srcCompat="@drawable/ic_video"/>-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:textColor="@android:color/white"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:textSize="10sp"-->
+    <!--                android:text="SNAP"/>-->
+    <!--        </LinearLayout>-->
+    <!--    </LinearLayout>-->
+
+    <!-- Edit -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/controls"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="300dp"
+        app:behavior_skipCollapsed="false"
+        android:elevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_marginBottom="96dp"-->
+    <!--        android:layout_gravity="bottom|start">-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/changeFilter"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="56dp"-->
+    <!--            android:layout_margin="16dp"-->
+    <!--            android:background="@drawable/background"-->
+    <!--            android:elevation="3dp"-->
+    <!--            app:srcCompat="@drawable/ic_filters" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/toggleCamera"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="56dp"-->
+    <!--            android:layout_margin="16dp"-->
+    <!--            android:background="@drawable/background"-->
+    <!--            android:elevation="3dp"-->
+    <!--            app:srcCompat="@drawable/ic_switch" />-->
+    <!--    </LinearLayout>-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

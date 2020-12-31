@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:contentDescription="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="82dp"
+            app:srcCompat="@drawable/phodo_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:paddingTop="38dp"
+            android:paddingBottom="32dp"
+            android:layout_marginTop="198dp"
+            android:fontFamily="google-sans"
+            android:gravity="center"
+            android:text="@string/phodo_discription"
+            android:textColor="@color/blueviolet"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:background="@drawable/list_item_background"
+            android:id="@+id/java_entry_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:padding="20dp"
+            android:text="@string/phodo_face_detection"
+            android:gravity="center"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/TF_Face_recog_entry_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="168dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginLeft="28dp"
+            android:background="@drawable/list_item_background"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/phodo_face_customizing"
+            android:textSize="26sp" />
+
+        <!--    <TextView-->
+        <!--        android:background="@drawable/list_item_background"-->
+        <!--        android:id="@+id/kotlin_entry_point"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_margin="@dimen/activity_vertical_margin"-->
+        <!--        android:padding="20dp"-->
+        <!--        android:text="@string/kotlin_entry_title"-->
+        <!--        android:textSize="26sp" />-->
+
+    </FrameLayout>
+</LinearLayout>
