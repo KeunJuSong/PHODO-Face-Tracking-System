@@ -30,7 +30,10 @@ From this system, we can anticipate applications in Entertainment and Security f
 * Camera Rail
 
 ### **Application**
-* PHODO 
+#### **PHODO** 
+* Supporting basic camera function
+* Tracking Faces 
+* Supporting Buletooth that link the main body 
 
 ### **3D Modeling**
 * Design the external apperance by JungYoong Min
