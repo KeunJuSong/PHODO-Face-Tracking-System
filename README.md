@@ -10,6 +10,7 @@
 * Su Min Kim (academic adviser)
 ### **Oragnization**
 * Korea Polytechnic University LINC+
+* 20th Industrial Technology Exhibition, Korea Polytechnic University.
 
 ## **OverView**
 PHODO is face tracking system that consisted of the main body and mobile app.
