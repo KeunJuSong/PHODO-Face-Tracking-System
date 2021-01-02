@@ -14,7 +14,7 @@
 * Korea Polytechnic University LINC+
 * 20th Industrial Technology Exhibition, Korea Polytechnic University.
 
-## **OverView**
+## **Overview**
 PHODO is face tracking system that consisted of the main body and mobile app.
 
 PHODO's face tracking technology is based on Machine Learning.
