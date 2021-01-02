@@ -1,4 +1,6 @@
-# **PHODO-Face-Tracking-System**
+<img src="https://user-images.githubusercontent.com/48046183/103460806-afff3480-4d5c-11eb-88e3-e6636b4c3b1e.PNG" width="15%">
+
+# **PHODO : Face Tracking System**
 
 ## **Developers & Oragnization**
 ### **Devlopers**
@@ -18,6 +20,8 @@ PHODO is face tracking system that consisted of the main body and mobile app.
 PHODO's face tracking technology is based on Machine Learning.
 
 From this system, we can anticipate applications in Entertainment and Security field with facial similarity.
+
+See more information about PHODO : **https://yyc9920.github.io/phodo.github.io/index.html**
 
 ## **System Architecture**
 
