@@ -43,6 +43,12 @@ From this system, we can anticipate applications in Entertainment and Security f
 ### **3D Modeling**
 * Design the external apperance by JungYoong Min
 
+<p float="left">
+<img src="https://user-images.githubusercontent.com/48046183/103457424-9bae3e00-4d42-11eb-89a6-bca5c761262f.png" width="40%">
+<img src="https://user-images.githubusercontent.com/48046183/103457426-9e109800-4d42-11eb-99b2-22fd8b5983a1.png" width="40%">
+</p>
+
+
 ## **Function of the System**
 * **Multiple Face Tracking**: When there are more than one face on the screen, tracking the coordinates of the faces by averaging operations.
 * **User's Face Customizing**: PHODO can recognize the face individually, so it can tracking just one person that user want.
