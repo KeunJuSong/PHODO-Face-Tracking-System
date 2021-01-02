@@ -20,7 +20,10 @@ PHODO's face tracking technology is based on Machine Learning.
 From this system, we can anticipate applications in Entertainment and Security field with facial similarity.
 
 ## **System Architecture**
+
 ### **System Block Diagram**
+<img src="https://user-images.githubusercontent.com/48046183/103452023-6982e900-4d0e-11eb-9d64-eec16f13facf.png" width="70%">
+
 ### **H/W**
 * Raspberry Pi Zero W (MCU)
 * Stepping Motors (2EA)
@@ -47,6 +50,18 @@ From this system, we can anticipate applications in Entertainment and Security f
 * **3-Div Optimal Composition**: PHODO can take the photo automatically with optimal composition by controling face coordinates. Face position is established Left-Center-Right.
 
 ## **Result**
+* PHODO main body
+<img src="https://user-images.githubusercontent.com/48046183/103452046-a64ee000-4d0e-11eb-8903-77714bf11989.jpg" width="50%">
+
+* PHODO Application
+  * Main Activity
+  <img src="https://user-images.githubusercontent.com/48046183/103452071-e4e49a80-4d0e-11eb-8d2f-90ec86fb5758.jpg" width="25%">
+  
+  * Face Recognition
+  <img src="https://user-images.githubusercontent.com/48046183/103452076-ee6e0280-4d0e-11eb-8693-f192eb55da96.jpg" width="25%">
+  
+  * Face Detection
+  <img src="https://user-images.githubusercontent.com/48046183/103452077-ef9f2f80-4d0e-11eb-8961-c9dfc41aa7c1.jpg" width="25%">
 
 ## **Development Environment**
 * Android Studio IDE (Java)
