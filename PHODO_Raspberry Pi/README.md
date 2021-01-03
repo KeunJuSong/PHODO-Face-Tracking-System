@@ -4,8 +4,7 @@
 * PHODO MCU : Raspberry Pi Zero W
 * Control Stepping Motor and Servo Motor for tracking action
 * Link between PHODO application with Bluetooth
-* See [phodo_final.py](PHODO-Face-Tracking-System/PHODO_Raspberry Pi/PHODO_Tracking algorithm/phodo_final.py) is setting code for PHODO system.
-* See **PHODO_Tracking algorithm** folder. It is setting code for PHODO system.
+* See **[PHODO_Tracking algorithm](https://github.com/KeunJuSong/PHODO-Face-Tracking-System/tree/master/PHODO_Raspberry%20Pi/PHODO_Tracking%20algorithm)** folder. **[phodo_final.py](https://github.com/KeunJuSong/PHODO-Face-Tracking-System/blob/master/PHODO_Raspberry%20Pi/PHODO_Tracking%20algorithm/phodo_final.py)** is setting code for PHODO system.
 
 ## **Function of PHODO MCU**
 * **Bluetooth**
