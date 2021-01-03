@@ -75,7 +75,7 @@ See more information about PHODO : **https://yyc9920.github.io/phodo.github.io/i
 
 ## **Development Environment**
 * Android Studio IDE (Java)
-* Python in Raspberry Pi Terminal
+* Raspberry Pi Terminal (Python)
 
 ## **Reference**
 * Face Recognition : https://github.com/pillarpond/face-recognizer-android
