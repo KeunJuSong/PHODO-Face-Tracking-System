@@ -19,9 +19,9 @@ Refer Google ML Kit quickstart which is in Github (See Reference)
 
 Face Recognition technology is developed from Tensorflow Lite and FaceNet.
 
-Refer Tensorflow examples and face recognizer project in Github (See Reference) 
+Refer Tensorflow examples and face recognizer project in Github (See [Reference](#Refrence)) 
 
-Refer FaceNet paper to understand why we use this model in PHODO Application. (See Reference)
+Refer FaceNet paper to understand why we use this model in PHODO Application. (See [Reference](#Refrecne))
 
 
 ### **Handsfree Capture**
