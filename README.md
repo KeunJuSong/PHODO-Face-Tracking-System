@@ -64,14 +64,11 @@ See more information about PHODO : **https://yyc9920.github.io/phodo.github.io/i
 <img src="https://user-images.githubusercontent.com/48046183/103452046-a64ee000-4d0e-11eb-8903-77714bf11989.jpg" width="50%">
 
 * PHODO Application
-  * Main Activity
-  <img src="https://user-images.githubusercontent.com/48046183/103452071-e4e49a80-4d0e-11eb-8d2f-90ec86fb5758.jpg" width="25%">
- 
-  * Face Recognition Activity
-  <img src="https://user-images.githubusercontent.com/48046183/103452076-ee6e0280-4d0e-11eb-8693-f192eb55da96.jpg" width="25%">
-  
-  * Face Detection Activity
-  <img src="https://user-images.githubusercontent.com/48046183/103452077-ef9f2f80-4d0e-11eb-8961-c9dfc41aa7c1.jpg" width="25%">
+ <p float="left">
+ <img src="https://user-images.githubusercontent.com/48046183/103452071-e4e49a80-4d0e-11eb-8d2f-90ec86fb5758.jpg" width="25%">
+ <img src="https://user-images.githubusercontent.com/48046183/103452076-ee6e0280-4d0e-11eb-8693-f192eb55da96.jpg" width="25%">
+ <img src="https://user-images.githubusercontent.com/48046183/103452077-ef9f2f80-4d0e-11eb-8961-c9dfc41aa7c1.jpg" width="25%">
+ </p>
 
 ## **Development Environment**
 * Android Studio IDE (Java, C++, Kotlin)
