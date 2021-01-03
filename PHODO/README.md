@@ -12,7 +12,7 @@
 
 Face Detection technology is developed from Google ML Kit API.
 
-Refer Google ML Kit quickstart which is in Github (See Reference)
+Refer Google ML Kit quickstart which is in Github (See [Reference](#reference))
 
 * **Face Recognition**
 <img src="https://user-images.githubusercontent.com/48046183/103460185-a0312180-4d57-11eb-82d2-748fffde287a.png" width="40%">
@@ -30,7 +30,7 @@ Refer FaceNet paper to understand why we use this model in PHODO Application. (S
 
 Voice Recognition technology is developed from IBM Watson STT and Language Translator API.
 
-Refer IBM Watson voice recognition example in Github (See Reference)
+Refer IBM Watson voice recognition example in Github (See [Reference](#reference))
 
 ### **3-Div Optimal Composition**
 <img src="https://user-images.githubusercontent.com/48046183/103460513-fa32e680-4d59-11eb-8cba-15d40bb04b06.png" width="40%">
@@ -44,7 +44,7 @@ Specified screen range have 3 parts which are left, center, and right.
 
 To link between MCU, especailly Raspberry Pi Zero W, we use Bluetooth SPP library to support serial communication.
 
-Refer Bluetooth SPP library project in Github (See Reference)
+Refer Bluetooth SPP library project in Github (See [Reference](#reference))
 
 ## **Reference**
 * Google ML Kit quickstart : https://github.com/googlesamples/mlkit/tree/master/android/vision-quickstart
