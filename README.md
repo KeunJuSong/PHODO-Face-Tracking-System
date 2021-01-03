@@ -74,7 +74,7 @@ See more information about PHODO : **https://yyc9920.github.io/phodo.github.io/i
   <img src="https://user-images.githubusercontent.com/48046183/103452077-ef9f2f80-4d0e-11eb-8961-c9dfc41aa7c1.jpg" width="25%">
 
 ## **Development Environment**
-* Android Studio IDE (Java)
+* Android Studio IDE (Java, C++, Kotlin)
 * Raspberry Pi Terminal (Python)
 
 ## **Reference**
