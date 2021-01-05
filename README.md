@@ -60,15 +60,18 @@ See more information about PHODO : **https://yyc9920.github.io/phodo.github.io/i
 * **3-Div Optimal Composition**: PHODO can take the photo automatically with optimal composition by controling face coordinates. Face position is established Left-Center-Right.
 
 ## **Result**
-* PHODO main body
+* **PHODO main body**
 <img src="https://user-images.githubusercontent.com/48046183/103452046-a64ee000-4d0e-11eb-8903-77714bf11989.jpg" width="50%">
 
-* PHODO Application
+* **PHODO Application**
  <p float="left">
  <img src="https://user-images.githubusercontent.com/48046183/103452071-e4e49a80-4d0e-11eb-8d2f-90ec86fb5758.jpg" width="25%">
  <img src="https://user-images.githubusercontent.com/48046183/103452076-ee6e0280-4d0e-11eb-8693-f192eb55da96.jpg" width="25%">
  <img src="https://user-images.githubusercontent.com/48046183/103452077-ef9f2f80-4d0e-11eb-8961-c9dfc41aa7c1.jpg" width="25%">
  </p>
+
+* **PHODO Face Tracking action**
+<img src="https://user-images.githubusercontent.com/48046183/103651923-a583ab80-4fa5-11eb-9cc7-a64b90c0c8b9.gif" width="70%">
 
 ## **Development Environment**
 * Android Studio IDE (Java, C++, Kotlin)
