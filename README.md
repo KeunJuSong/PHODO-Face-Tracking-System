@@ -21,7 +21,7 @@ PHODO's face tracking technology is based on Machine Learning.
 
 From this system, we can anticipate applications in Entertainment and Security field with facial similarity.
 
-Paper about PHODO is updated. [click](https://github.com/KeunJuSong/PHODO-Face-Tracking-System/blob/master/PHODO_paper.pdf)
+Paper about PHODO is updated. [[Click]](https://github.com/KeunJuSong/PHODO-Face-Tracking-System/blob/master/PHODO_paper.pdf)
 
 See more information about PHODO : **https://yyc9920.github.io/phodo.github.io/index.html**
 
