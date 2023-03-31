@@ -11,8 +11,8 @@
 * JungYoong Min
 * Su Min Kim (academic adviser)
 ### **Oragnization**
-* Korea Polytechnic University LINC+
-* 20th Industrial Technology Exhibition, Korea Polytechnic University (http://expo.kpu.ac.kr/)
+* Tech University of Korea LINC+
+* 20th Industrial Technology Exhibition, Tech University of Korea
 
 ## **Overview**
 PHODO is face tracking system that consisted of the main body and mobile app.
