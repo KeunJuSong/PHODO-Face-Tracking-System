@@ -4,12 +4,12 @@
 
 ## **Developers & Oragnization**
 ### **Devlopers**
-* Keun Ju Song
+* Keunju Song
 * Yechan Yun
 * HyeKyung Kim
 * SoHee Park
 * JungYoong Min
-* Su Min Kim (academic adviser)
+* [Su Min Kim](https://sites.google.com/site/smkimphd/) (adviser)
 ### **Oragnization**
 * Tech University of Korea LINC+
 * 20th Industrial Technology Exhibition, Tech University of Korea
@@ -44,10 +44,10 @@ See more information about PHODO : **https://yyc9920.github.io/phodo.github.io/i
 #### **PHODO** 
 * Supporting basic camera function
 * Tracking Faces 
-* Supporting Buletooth that link the main body 
+* Supporting Buletooth that links to the main body 
 
 ### **3D Modeling**
-* Design the external apperance by JungYoong Min
+* Designed by JungYoong Min
 
 <p float="left">
 <img src="https://user-images.githubusercontent.com/48046183/103457424-9bae3e00-4d42-11eb-89a6-bca5c761262f.png" width="40%">
