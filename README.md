@@ -2,8 +2,8 @@
 
 # **PHODO : Face Tracking System**
 
-## **Developers & Oragnization**
-### **Devlopers**
+## **Contributors & Oragnization**
+### **Contributors**
 * Keunju Song
 * Yechan Yun
 * HyeKyung Kim
